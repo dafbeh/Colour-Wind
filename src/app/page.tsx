@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="h-[calc(100vh-200px)] w-full bg-[#D3DAD9]
+    <div className="h-[calc(100vh-200px)] w-full bg-[#D3DAD9] overflow-hidden
       dark:bg-[#37353E] transition-all duration-300">    
       <div className="flex flex-col items-center justify-center h-full w-full">
         <h1 className="sm:text-6xl text-5xl font-bold text-transparent bg-clip-text 
@@ -16,7 +16,9 @@ export default function Home() {
         </div>
       </div>
       <a href="https://dafbeh.xyz" target='_blank'>
-        <span className="absolute bottom-0 right-0 p-2">dafbeh</span>
+        <span className="absolute bottom-0 right-0 p-2 text-black/50 dark:text-white/50">
+          dafbeh
+        </span>
       </a>
     </div>
   );
