@@ -1,12 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { generateColorScale, generateTailwindThemeCSS } from "../lib/colourUtils";
 import { useTheme } from "next-themes";
+import { Alert, AlertDescription, AlertTitle } from "../components/alert"
+import { CheckCircle2Icon } from "lucide-react";
 
 export default function GeneratorPage() {
-  const [color, setColor] = useState("#6b5f9e");
-  const [name, setName] = useState("myColor");
+  const [ color, setColor ] = useState("#6b5f9e");
+  const [ name, setName ] = useState("myColor");
+  const [ alert, setAlert ] = useState(false);
   const { theme } = useTheme();
 
   const scale = generateColorScale(color);
@@ -15,6 +18,15 @@ export default function GeneratorPage() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(css);
   };
+
+  useEffect(() => {
+    if (alert) {
+      const timer = setTimeout(() => {
+        setAlert(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [alert]);
 
   return (
     <div className="w-full h-full
@@ -80,12 +92,24 @@ export default function GeneratorPage() {
               font-mono text-sm mb-3 resize-none focus:outline-none"
           />
           <button
-            onClick={copyToClipboard}
+            onClick={() => { copyToClipboard(); setAlert(true); }}
             className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700"
           >
             Copy to Clipboard
           </button>
         </div>
+
+        <Alert className={`md:max-w-sm max-w-[calc(100vw-28px)] mx-auto fixed top-12 right-2 
+            transition-all duration-300 ease-in-out transform ${
+            alert ? 'opacity-100 translate-y-0 scale-100' 
+            : 'opacity-0 translate-x-4 scale-95 pointer-events-none'
+          }`}>
+          <CheckCircle2Icon />
+          <AlertTitle className="dark:text-green-300 text-green-600">Success</AlertTitle>
+            <AlertDescription className={"text-gray-500"}>
+              Code copied to clipboard!
+            </AlertDescription>
+        </Alert>
 
         <div className="w-full max-w-2xl mt-8">
           <p className="text-2xl justify-center flex">🎨 How to Use the Color Theme Generator</p>

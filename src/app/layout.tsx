@@ -44,8 +44,7 @@ export default function RootLayout({
           <div className="flex flex-col min-h-screen 
             overflow-y-auto overflow-x-hidden bg-[#D3DAD9] dark:bg-[#37353E]">
             <Navbar />
-            <main className="flex-1 w-full">{children}</main>
-            <Analytics/>
+            <main className="flex-1 w-full">{children}<Analytics/></main>
           </div>
           </ThemeProvider>
         </body>
