@@ -124,11 +124,8 @@ export default function GeneratorPage() {
           <div className="bg-[#171717] w-full p-8 rounded-lg">
             <pre className="text-white text-sm whitespace-pre-line font-mono">
               <code>
-                {`<div class="bg-myColour-500 text-myColour-100">
-                `}&nbsp;&nbsp;&nbsp;&nbsp;Hello World! 
-                {`
-                  </div>
-                `}
+                {`<div class="text-${name}-500">
+                `}<p style={{ color }}>&nbsp;&nbsp;&nbsp;&nbsp;Hello World!</p>{`</div>`}
               </code>
             </pre>
           </div>
