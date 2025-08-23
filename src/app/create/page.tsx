@@ -88,8 +88,8 @@ export default function GeneratorPage() {
         </div>
 
         <div className="w-full max-w-2xl mt-8">
-          <p className="text-2xl justify-center flex mb-1">🎨 How to Use the Color Theme Generator</p>
-          <ol className="list-decimal list-outside p-2 ml-5">
+          <p className="text-2xl justify-center flex">🎨 How to Use the Color Theme Generator</p>
+          <ol className="list-decimal list-outside p-2 ml-5 mb-1">
             <li>Select your starting color with the color picker.</li>
             <li>Enter a short, single-word name (e.g. brand or primary). This will be the prefix for your utility classes.</li>
             <li>A full scale of shades is generated instantly. You can see how each step looks in both light and dark mode.</li>

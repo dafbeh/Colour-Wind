@@ -62,6 +62,7 @@ const SpotlightButton = ({ children }: SilverButtonProps) => {
         overflow-hidden hover:shadow-xl hover:scale-105 transition-transform active:scale-95
         dark:bg-transparent bg-white/20">
       <button
+        tabIndex={-1}
         ref={btnRef}
         className="w-full h-full"
       >

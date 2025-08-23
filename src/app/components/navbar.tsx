@@ -12,8 +12,7 @@ const caveat = Caveat({
 export default function Navbar() {
     return (
         <div>
-            <div className="w-full p-1 bg-[#D3DAD9] dark:bg-[#37353E]
-                flex justify-between items-center">
+            <div className="w-full p-1 flex justify-between items-center">
             <div
                 className={`${caveat.className} text-2xl font-bold pl-1 cursor-pointer select-none`}
                 onClick={() => { window.location.href = '/' }}
