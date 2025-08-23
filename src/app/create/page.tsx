@@ -22,7 +22,7 @@ export default function GeneratorPage() {
       <div className="flex flex-col items-center">
 
         {/* Controls */}
-        <div className="flex gap-4 items-center mb-6">
+        <div className="flex md:gap-4 gap-2 items-center mb-6">
           <p className="">Select Colour:</p>
           <input
             type="color"
@@ -40,7 +40,7 @@ export default function GeneratorPage() {
               }
             }}
             placeholder="Color name"
-            className="px-3 py-2 ring-1 rounded focus:outline-none"
+            className="px-3 py-2 ring-1 rounded focus:outline-none md:w-54 w-32"
           />
         </div>
 
@@ -62,8 +62,8 @@ export default function GeneratorPage() {
               <div
                 key={key}
                 className="flex items-center justify-center text-xs 
-                    text-gray-800 rounded shadow-sm"
-                style={{ backgroundColor: value, height: "80px", width: "80px", boxShadow: `0 0 0 2px ${dynamicColour}` }}
+                    text-gray-800 rounded shadow-sm md:w-20 md:h-20 w-18 h-18"
+                style={{ backgroundColor: value, boxShadow: `0 0 0 2px ${dynamicColour}` }}
               >
                 <span style={{ color: dynamicColour }} className="text-xs font-bold">{key}</span>
               </div>
