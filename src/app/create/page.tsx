@@ -8,7 +8,7 @@ import { CheckCircle2Icon } from "lucide-react";
 
 export default function GeneratorPage() {
   const [ color, setColor ] = useState("#6b5f9e");
-  const [ name, setName ] = useState("myColor");
+  const [ name, setName ] = useState("myCoulor");
   const [ alert, setAlert ] = useState(false);
   const { theme } = useTheme();
 
@@ -51,7 +51,7 @@ export default function GeneratorPage() {
                 e.preventDefault();
               }
             }}
-            placeholder="Color name"
+            placeholder="Colour name"
             className="px-3 py-2 ring-1 rounded focus:outline-none md:w-54 w-32"
           />
         </div>
@@ -112,9 +112,9 @@ export default function GeneratorPage() {
         </Alert>
 
         <div className="w-full max-w-2xl mt-8">
-          <p className="text-2xl justify-center flex">🎨 How to Use the Color Theme Generator</p>
+          <p className="text-2xl justify-center flex">🎨 How to Use the Colour Theme Generator</p>
           <ol className="list-decimal list-outside p-2 ml-5 mb-1">
-            <li>Select your starting color with the color picker.</li>
+            <li>Select your starting colour with the colour picker.</li>
             <li>Enter a short, single-word name (e.g. brand or primary). This will be the prefix for your utility classes.</li>
             <li>A full scale of shades is generated instantly. You can see how each step looks in both light and dark mode.</li>
             <li>Click Copy to Clipboard to copy the generated CSS rules.</li>
@@ -124,7 +124,7 @@ export default function GeneratorPage() {
           <div className="bg-[#171717] w-full p-8 rounded-lg">
             <pre className="text-white text-sm whitespace-pre-line font-mono">
               <code>
-                {`<div class="bg-myColor-500 text-myColor-100">
+                {`<div class="bg-myColour-500 text-myColour-100">
                 `}&nbsp;&nbsp;&nbsp;&nbsp;Hello World! 
                 {`
                   </div>
