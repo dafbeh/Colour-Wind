@@ -2,7 +2,11 @@
 
 import { useEffect, useRef } from "react";
 
-const SilverButton = ({ children }: any) => {
+type SilverButtonProps = {
+  children: ReactNode;
+};
+
+const SilverButton = ({ children }: SilverButtonProps) => {
   return (
     <div className="w-full max-w-md mx-auto">
       <SpotlightButton>
@@ -12,7 +16,7 @@ const SilverButton = ({ children }: any) => {
   );
 };
 
-const SpotlightButton = ({ children }: any) => {
+const SpotlightButton = ({ children }: SilverButtonProps) => {
   const btnRef = useRef<HTMLButtonElement>(null);
   const spanRef = useRef<HTMLSpanElement>(null);
 
