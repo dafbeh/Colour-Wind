@@ -8,7 +8,7 @@ import { CheckCircle2Icon } from "lucide-react";
 
 export default function GeneratorPage() {
   const [ color, setColor ] = useState("#6b5f9e");
-  const [ name, setName ] = useState("myCoulor");
+  const [ name, setName ] = useState("myColour");
   const [ alert, setAlert ] = useState(false);
   const { theme } = useTheme();
 
